@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Kianda';
+    src: url('Kianda.eot');
+    src: local('Kianda'),
+        url('Kianda.eot?#iefix') format('embedded-opentype'),
+        url('Kianda.woff2') format('woff2'),
+        url('Kianda.woff') format('woff'),
+        url('Kianda.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
