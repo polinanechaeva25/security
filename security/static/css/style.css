@@ -484,8 +484,15 @@ a:focus {
     margin-bottom: 45px;
     padding: 150px 0 90px 0;
     text-align: center;
-    background: #ffe1a6;
+    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.8)), url(../img/mountain-1.jpg);
+    background-size: cover;
+    background-position: center;
 }
+.page-header.contact-back{
+    background-image: linear-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, 0.8)), url(../img/mountain-2.jpg);
+
+}
+
 
 .page-header h2 {
     position: relative;
@@ -738,11 +745,9 @@ a:focus {
     margin-bottom: 30px;
     background: rgba(29, 36, 52, .04);
     transition: .3s;
+    min-height: 100%;
 }
 
-.price .price-item:hover {
-    background: #ffe1a6;
-}
 
 .price .price-img {
     position: relative;
@@ -767,7 +772,7 @@ a:focus {
 
 .price .price-text {
     position: relative;
-    padding: 0 15px;
+    padding: 0;
     width: calc(100% - 100px);
     overflow: hidden;
 }
@@ -778,6 +783,7 @@ a:focus {
     font-size: 16px;
     font-weight: 600;
     white-space: nowrap;
+    text-align: center;
 }
 
 .price .price-text h3 {
@@ -786,6 +792,7 @@ a:focus {
     font-size: 16px;
     font-weight: 400;
     color: #333333;
+    text-align: center;
 }
 
 
@@ -1429,11 +1436,17 @@ a:focus {
     margin:0;
     float: left;
 }
+.default-show{
+    display: none;
+}
+:target ~ .default-show {
+    display: inline-block
+}
 .show:target {
     display: none;
 }
 .hide:target + .show {
-    display: inline;
+    display: none;
 }
 .hide:target {
     display: none;
@@ -1442,6 +1455,7 @@ a:focus {
     display:flex;
     width: 100%;
 }
+
 
 /*style the (+) and (-) */
 
@@ -1471,21 +1485,25 @@ a:focus {
     flex: 0  0 25%;
     text-align: center;
     width: 25%;
-    height: 40vh;
+    height: 310px;
+}
+.fs-14{
+    font-size: 14px !important;
+    font-weight: bold !important;
 }
 @media (min-width: 1440px) and (max-width: 2560px){
     .banner-item{
-        height: 35vh;
+        height: 450px;
     }
 }
 @media (min-width: 1024px) and (max-width: 1440px){
     .banner-item{
-        height: 40vh;
+        height: 310px;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
     .banner-item{
-        height: 40vh;
+        height: 310px;
         flex: 0  0 50%;
     }
 }
@@ -1497,10 +1515,17 @@ a:focus {
 }
 .back-red{
     background: #a71d1d;
+    border: 10px solid white;
 }
 .back-beige{
     background: beige;
+    border: 10px solid white;
 }
+
+.back-red:hover, .back-beige:hover{
+    box-shadow: 0px 10px 15px #0000009c;
+}
+
 .top-len{
     min-height: 30%;
     font-size: 24px;
@@ -1563,43 +1588,68 @@ a:focus {
 *::placeholder {
     color: beige !important;
 }
+.contact-cards{
+    flex: 0 0 25.3%;
+    text-align: center;
+    padding: 0px 10px;
+    border: 3px solid #a71d1d;
+    margin: 0 4%;
+}
+.d-flex{
+    margin: auto;
+    width: 80%;
+}
+.fa-2x {
+    font-size: 2em;
+    margin: 10px;
+}
 @media (min-width: 2560px){
     .height-h{
-        min-height: 15vh;
+        min-height: 240px;
     }
 }
 @media (min-width: 1440px) and (max-width: 2560px){
     .height-h{
-        min-height: 10vh;
+        min-height: 160px;
     }
 }
 @media (min-width: 1024px) and (max-width: 1440px){
     .height-h{
-        min-height: 29vh;
+        min-height: 190px;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
     .height-h{
-        min-height: 13vh;
+        min-height: 190px;
     }
 }
-@media (min-width: 2560px){
+@media (min-width: 1024px){
     .height-p{
-        min-height: 15vh;
-    }
-}
-@media (min-width: 1440px) and (max-width: 2560px){
-    .height-p{
-        min-height: 11vh;
-    }
-}
-@media (min-width: 1024px) and (max-width: 1440px){
-    .height-p{
-        min-height: 33vh;
+        min-height: 170px;
     }
 }
 @media (min-width: 768px) and (max-width: 1024px){
     .height-p{
-        min-height: 11vh;
+        min-height: 220px;
+    }
+}
+@media (min-width: 1200px){
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px){
+    .col-lg-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 15px;
+    }
+}
+@media (max-width: 768px){
+    .col-lg-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 15px;
     }
 }

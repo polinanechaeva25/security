@@ -1,0 +1,66 @@
+{% extends 'mainapp/base.html'%}
+{% load static %}
+
+{% block 'content' %}
+
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Сертификаты</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'mainapp:index' %}">Главная</a>
+                <a href="{% url 'mainapp:certificate' %}">Сертификаты</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="price">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Вы можете скачать и ознакомиться с любым из представленных документов</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="price-item">
+                    <i class="fa fa-book fa-3x" aria-hidden="true"></i>
+                    <div class="price-text">
+                        <h2 class="fs-14">Устав</h2>
+                        <h3><a href="{% static 'docs/regulation.pdf' %}" download="" class="readmore">Скачать</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="price-item">
+                    <i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
+                    <div class="price-text">
+                        <h2 class="fs-14">Членство<br> в ФКЦ</h2>
+                        <h3><a href="{% static 'docs/participation.pdf' %}" download="" class="readmore">Скачать</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="price-item">
+                    <i class="fa fa-check-circle-o fa-3x" aria-hidden="true"></i>
+                    <div class="price-text">
+                        <h2 class="fs-14">Лицензия</h2>
+                        <h3><a href="{% static 'docs/license.pdf' %}" download="" class="readmore">Скачать</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="price-item">
+                    <i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+                    <div class="price-text">
+                        <h2 class="fs-14">Выписка из реестра<br> лицензий</h2>
+                        <h3><a href="{% static 'docs/license_registry.pdf' %}" download="" class="readmore">Скачать</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

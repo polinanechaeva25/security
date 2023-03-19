@@ -1,0 +1,70 @@
+{% extends 'mainapp/base.html'%}
+{% load static %}
+
+{% block 'content' %}
+
+<div class="page-header contact-back">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Контакты</h2>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'mainapp:index' %}">Главная</a>
+                <a href="{% url 'mainapp:contact' %}">Контакты</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-header text-center" style="margin-top: 90px;">
+    <p>Мы постараемся ответить на любые Ваши вопросы</p>
+    <h2>Вы можете писать нам в любое время</h2>
+</div>
+<div class="d-flex">
+    <div class="contact-cards"><p class="height-contact" style="padding-top: 24px;"><i class="fa fa-map-marker fa-2x"></i>649000, Республика Алтай, г Горно-Алтайск, ул Кучияк д 7</p></div>
+    <div class="contact-cards"><p class="height-contact" style="padding: 24px 0;"><i class="fa fa-phone fa-2x"></i>8(38822) 2-06-05</p></div>
+    <div class="contact-cards"> <p class="height-contact" style="padding: 24px 0;"><i class="fa fa-envelope fa-2x"></i>mech727@yandex.ru</p></div>
+</div>
+<div class="contact">
+    <div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/11319/gorno-altaysk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Горно‑Алтайск</a><a href="https://yandex.ru/maps/11319/gorno-altaysk/house/ulitsa_pavla_kuchiyak_7/bEwYfwFmTE0GQFtrfXV3cXhlbA==/?ll=85.966581%2C51.960468&utm_medium=mapframe&utm_source=maps&z=16.33" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Павла Кучияк, 7 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=85.966581%2C51.960468&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxOTQzMTQ4MzIxEm_QoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCQ0LvRgtCw0LksINCT0L7RgNC90L4t0JDQu9GC0LDQudGB0LosINGD0LvQuNGG0LAg0J_QsNCy0LvQsCDQmtGD0YfQuNGP0LosIDciCg3j7qtCFYXXT0I%2C&z=16.33" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" placeholder="Ваше Имя"
+                                       required="required" data-validation-required-message="Введите Ваше имя"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email"
+                                       required="required" data-validation-required-message="Введите ваш email"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Тема"
+                                       required="required" data-validation-required-message="Введите тему письма"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" placeholder="Сообщение" required="required"
+                                          data-validation-required-message="Введите сообщение"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn" type="submit" id="sendMessageButton">Отправить письмо</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
